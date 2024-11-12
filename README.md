@@ -5,3 +5,7 @@ https://youtu.be/8b6iqmo_2Os?si=kdCB5N8TKVOqkqyb
 
 supabaseのデータベースが停止していたため、もう一度データベースを作成しました。
 https://supabase.com/docs/guides/platform/upgrading#time-limits
+
+
+# デプロイ先
+https://bbs-with-nextjs-youtube-tutorial.vercel.app/
