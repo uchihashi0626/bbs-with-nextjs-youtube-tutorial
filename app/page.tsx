@@ -3,7 +3,7 @@ import BBSCardList from "./components/BBSCardList";
 import { BBSData } from "./types/types";
 
 async function getBBSAllData() {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/post`, {
+  const response = await fetch(`/post`, {
     cache: "no-store",
   });
   if (!response.ok) {
