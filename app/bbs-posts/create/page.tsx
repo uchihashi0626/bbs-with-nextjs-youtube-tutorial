@@ -34,7 +34,7 @@ const CreateBBSPage = () => {
 
   async function onSubmit(value: z.infer<typeof formSchema>) {
     const { username, title, content } = value;
-    postBBS({ username, title, content });
+    //postBBS({ username, title, content });
     try {
       await fetch(`${process.env.NEXT_PUBLIC_API_URL}/post`, {
         method: "POST",
