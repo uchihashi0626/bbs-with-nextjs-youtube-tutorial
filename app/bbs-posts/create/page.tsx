@@ -35,19 +35,19 @@ const CreateBBSPage = () => {
   async function onSubmit(value: z.infer<typeof formSchema>) {
     const { username, title, content } = value;
     postBBS({ username, title, content });
-    // try {
-    //   await fetch("http://localhost:3000/api/post", {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify({ username, title, content }),
-    //   });
-    //   router.push("/");
-    //   router.refresh();
-    // } catch (err) {
-    //   console.error(err);
-    // }
+    try {
+      await fetch(`${process.env.NEXT_PUBLIC_API_URL}/post`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username, title, content }),
+      });
+      router.push("/");
+      router.refresh();
+    } catch (err) {
+      console.error(err);
+    }
   }
 
   return (

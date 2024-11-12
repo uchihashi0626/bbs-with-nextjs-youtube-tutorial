@@ -15,6 +15,7 @@ async function getDetailBBSData(id: number) {
 
 const BBSDetailPage = async ({ params }: { params: { bbsId: number } }) => {
   const bbsDetailData = await getDetailBBSData(params.bbsId);
+  //console.log(bbsDetailData);
   const { title, content, username } = bbsDetailData;
 
   return (
